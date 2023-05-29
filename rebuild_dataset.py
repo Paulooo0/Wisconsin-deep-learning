@@ -8,17 +8,18 @@ def main():
 
     path = 'C:/Users/paulo/Data/dataset/cancer_wisconsin.csv'
     transformed_df = get_data(path)
-    transformed_df
 
     to_drop = transformed_df.columns[transformed_df.isna().all()]
     transformed_df = transformed_df.drop(to_drop, axis=1)
 
+    # Transform strings to numerical data, seen in data analysis
     for i in  range(len(transformed_df)):
         if transformed_df.loc[i, 'diagnosis'] == "B":
             transformed_df.loc[i, 'diagnosis'] = 0
         if transformed_df.loc[i, 'diagnosis'] == "M":
             transformed_df.loc[i, 'diagnosis'] = 1
-
+    
+    # Logarithmic transformation for the columns also seen in data analysis
     for i in range(len(transformed_df)):
         transformed_df.loc[i, 'area_mean'] = np.log(transformed_df.loc[i, 'area_mean'])
         transformed_df.loc[i, 'compactness_mean'] = np.log(transformed_df.loc[i, 'compactness_mean'])*-1
@@ -31,6 +32,7 @@ def main():
 
     print(transformed_df.head(5))
 
+    # Write a new dataset with transformed values
     file = open('dataset/rebuilded_cancer_wisconsin.csv', 'w')   
     file.write(transformed_df.to_csv(index=False))
     file.close()
