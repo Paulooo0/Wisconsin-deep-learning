@@ -1,10 +1,10 @@
 import pandas as pd
 
-def main():
-    def get_data(path):
-        return pd.read_csv(path)
+def get_data(path):
+    return pd.read_csv(path)
 
-    path = 'C:/Users/paulo/Data/dataset/cancer_wisconsin.csv'
+def main():
+    path = 'dataset/cancer_wisconsin.csv'
     transformed_df = get_data(path)
 
     to_drop = transformed_df.columns[transformed_df.isna().all()]
