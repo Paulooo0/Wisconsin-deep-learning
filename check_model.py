@@ -1,8 +1,7 @@
-import tensorflow as tf
 from tensorflow import keras
 from rebuild_dataset import get_data
 
-new_model = tf.keras.models.load_model('neural_model')
+new_model = keras.models.load_model('neural_model')
 new_model.summary()
 
 data = get_data('dataset/rebuilded_cancer_wisconsin.csv')
