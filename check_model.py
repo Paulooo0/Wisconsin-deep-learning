@@ -4,7 +4,7 @@ from rebuild_dataset import get_data
 new_model = keras.models.load_model('neural_model')
 new_model.summary()
 
-data = get_data('dataset/rebuilded_cancer_wisconsin.csv')
+data = get_data('dataset/rebuilted_cancer_wisconsin.csv')
 
 x = data.drop('diagnosis', axis=1)
 y = data['diagnosis']
