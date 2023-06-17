@@ -3,7 +3,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from rebuild_dataset import get_data
 
-data = get_data('dataset/rebuilded_cancer_wisconsin.csv')
+data = get_data('dataset/rebuilted_cancer_wisconsin.csv')
 
 x = data.drop('diagnosis', axis=1)
 y = data['diagnosis']
