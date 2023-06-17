@@ -19,7 +19,7 @@ def main():
 
     print(transformed_df.head(5))
 
-    file = open('dataset/rebuilded_cancer_wisconsin.csv', 'w')   
+    file = open('dataset/rebuilted_cancer_wisconsin.csv', 'w')   
     file.write(transformed_df.to_csv(index=False))
     file.close()
 
