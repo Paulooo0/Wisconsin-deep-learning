@@ -49,16 +49,10 @@ def get_pred():
     
     model = keras.models.load_model('neural_model')
 
-    # Need test and fix. ValueError: Failed to convert a NumPy array to a Tensor (Unsupported object type tuple).
     pred = model.predict(reshape(form,shape=(1,30)))
-    
-    # for pred in range(len(2:-2)):
-        
     
     printable_pred = str(pred).replace('[[', '')
     printable_pred = printable_pred.replace(']]', '')
-    
-    print(model.predict(reshape(form,shape=(1,30))))
 
     return flask.render_template('template.html', prediction=printable_pred)
 
