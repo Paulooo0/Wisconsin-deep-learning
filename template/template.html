@@ -7,66 +7,69 @@
     <body>
         <h1>Diagnosis prediction</h1>
         <form method="post" action="/pred">
+            <p><label>I setted this parameters for demonstration.
+                <p>Try to use other values presents in the dataset, or generate your own parameters.</label></p>
+            </label></p>
             <p><label for="radius_mean">Radius mean: </label>
-                <input type="number" id="radius_mean" name="radius_mean" min="0" value="1"></p>
+                <input type="float" id="radius_mean" name="radius_mean" min="0" value="17.99"></p>
             <p><label for="texture_mean">Texture mean: </label>
-                <input type="number" id="texture_mean" name="texture_mean" min="0" value="1"></p>
+                <input type="float" id="texture_mean" name="texture_mean" min="0" value="10.38"></p>
             <p><label for="perimeter_mean">Perimeter mean: </label>
-                <input type="number" id="perimeter_mean" name="perimeter_mean" min="0" value="1"></p>
+                <input type="float" id="perimeter_mean" name="perimeter_mean" min="0" value="122.8"></p>
             <p><label for="area_mean">Area mean: </label>
-                <input type="number" id="area_mean" name="area_mean" min="0" value="1"></p>
+                <input type="float" id="area_mean" name="area_mean" min="0" value="1001.0"></p>
             <p><label for="smoothness_mean">Smoothness mean: </label>
-                <input type="number" id="smoothness_mean" name="smoothness_mean" min="0" value="1"></p>
+                <input type="float" id="smoothness_mean" name="smoothness_mean" min="0" value="0.1184"></p>
             <p><label for="compactness_mean">Compactness mean: </label>
-                <input type="number" id="compactness_mean" name="compactness_mean" min="0" value="1"value="1"></p>
+                <input type="float" id="compactness_mean" name="compactness_mean" min="0" value="0.2776"value="1"></p>
             <p><label for="concavity_mean">Concavity mean: </label>
-                <input type="number" id="concavity_mean" name="concavity_mean" min="0" value="1"></p>
+                <input type="float" id="concavity_mean" name="concavity_mean" min="0" value="0.3001"></p>
             <p><label for="concave_points_mean">Concave points mean: </label>
-                <input type="number" id="concave_points_mean" name="concave_points_mean" min="0" value="1"></p>
+                <input type="float" id="concave_points_mean" name="concave_points_mean" min="0" value="0.1471"></p>
             <p><label for="symmetry_mean">Symmetry mean: </label>
-                <input type="number" id="symmetry_mean" name="symmetry_mean" min="0" value="1"></p>
+                <input type="float" id="symmetry_mean" name="symmetry_mean" min="0" value="0.2419"></p>
             <p><label for="fractal_dimension_mean">Fractal dimension mean: </label>
-                <input type="number" id="fractal_dimension_mean" name="fractal_dimension_mean" min="0" value="1"></p>
+                <input type="float" id="fractal_dimension_mean" name="fractal_dimension_mean" min="0" value="0.07871"></p>
             <p><label for="radius_se">Radius standard error: </label>
-                <input type="number" id="radius_se" name="radius_se" min="0" value="1"></p>
+                <input type="float" id="radius_se" name="radius_se" min="0" value="1.095"></p>
             <p><label for="texture_se">Texture standard error: </label>
-                <input type="number" id="texture_se" name="texture_se" min="0" value="1"></p>
+                <input type="float" id="texture_se" name="texture_se" min="0" value="0.9053"></p>
             <p><label for="perimeter_se">Perimeter standard error: </label>
-                <input type="number" id="perimeter_se" name="perimeter_se" min="0" value="1"></p>
+                <input type="float" id="perimeter_se" name="perimeter_se" min="0" value="8.589"></p>
             <p><label for="area_se">Area standard error: </label>
-                <input type="number" id="area_se" name="area_se" min="0" value="1"></p>
+                <input type="float" id="area_se" name="area_se" min="0" value="153.4"></p>
             <p><label for="smoothness_se">Smoothness standard error: </label>
-                <input type="number" id="smoothness_se" name="smoothness_se" min="0" value="1"></p>
+                <input type="float" id="smoothness_se" name="smoothness_se" min="0" value="0.006399"></p>
             <p><label for="compactness_se">Compactness standard error: </label>
-                <input type="number" id="compactness_se" name="compactness_se" min="0" value="1"></p>
+                <input type="float" id="compactness_se" name="compactness_se" min="0" value="0.04904"></p>
             <p><label for="concavity_se">Concavity standard error: </label>
-                <input type="number" id="concavity_se" name="concavity_se" min="0" value="1"></p>
+                <input type="float" id="concavity_se" name="concavity_se" min="0" value="0.05373"></p>
             <p><label for="concave_points_se">Concave points standard error: </label>
-                <input type="number" id="concave_points_se" name="concave_points_se" min="0" value="1"></p>
+                <input type="float" id="concave_points_se" name="concave_points_se" min="0" value="0.01587"></p>
             <p><label for="symmetry_se">Symmetry standard error: </label>
-                <input type="number" id="symmetry_se" name="symmetry_se" min="0" value="1"></p>
+                <input type="float" id="symmetry_se" name="symmetry_se" min="0" value="0.03003"></p>
             <p><label for="fractal_dimension_se">Fractal dimension standard error: </label>
-                <input type="number" id="fractal_dimension_se" name="fractal_dimension_se" min="0" value="1"></p>
+                <input type="float" id="fractal_dimension_se" name="fractal_dimension_se" min="0" value="0.006193"></p>
             <p><label for="radius_worst">Radius worst: </label>
-                <input type="number" id="radius_worst" name="radius_worst" min="0" value="1"></p>
+                <input type="float" id="radius_worst" name="radius_worst" min="0" value="25.38"></p>
             <p><label for="texture_worst">Texture worst: </label>
-                <input type="number" id="texture_worst" name="texture_worst" min="0" value="1"></p>
+                <input type="float" id="texture_worst" name="texture_worst" min="0" value="17.33"></p>
             <p><label for="perimeter_worst">Perimeter worst: </label>
-                <input type="number" id="perimeter_worst" name="perimeter_worst" min="0" value="1"></p>
+                <input type="float" id="perimeter_worst" name="perimeter_worst" min="0" value="184.6"></p>
             <p><label for="area_worst">Area worst: </label>
-                <input type="number" id="area_worst" name="area_worst" min="0" value="1"></p>
+                <input type="float" id="area_worst" name="area_worst" min="0" value="2019.0"></p>
             <p><label for="smoothness_worst">Smoothness worst: </label>
-                <input type="number" id="smoothness_worst" name="smoothness_worst" min="0" value="1"></p>
+                <input type="float" id="smoothness_worst" name="smoothness_worst" min="0" value="0.1622"></p>
             <p><label for="compactness_worst">Compactness worst: </label>
-                <input type="number" id="compactness_worst" name="compactness_worst" min="0" value="1"></p>
+                <input type="float" id="compactness_worst" name="compactness_worst" min="0" value="0.6656"></p>
             <p><label for="concavity_worst">Concavity worst: </label>
-                <input type="number" id="concavity_worst" name="concavity_worst" min="0" value="1"></p>
+                <input type="float" id="concavity_worst" name="concavity_worst" min="0" value="0.7119"></p>
             <p><label for="concavity_worst">Concave points worst: </label>
-                <input type="number" id="concave_points_worst" name="concave_points_worst" min="0" value="1"></p>
+                <input type="float" id="concave_points_worst" name="concave_points_worst" min="0" value="0.2654"></p>
             <p><label for="symmetry_worst">Symmetry worst: </label>
-                <input type="number" id="symmetry_worst" name="symmetry_worst" min="0" value="1"></p>
+                <input type="float" id="symmetry_worst" name="symmetry_worst" min="0" value="0.4601"></p>
             <p><label for="fractal_dimension_worst">Fractal dimension worst: </label>
-                <input type="number" id="fractal_dimension_worst" name="fractal_dimension_worst" min="0" value="1"></p>
+                <input type="float" id="fractal_dimension_worst" name="fractal_dimension_worst" min="0" value="0.1189"></p>
                 <button type="submit">Submit</button>
             <p><label id="pred">{{prediction}}</label></p>
         </form>
