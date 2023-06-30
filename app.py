@@ -55,7 +55,7 @@ def get_pred():
     else:
         print_pred = 'Malignant'
 
-    return render_template('template.html', prediction=print_pred)
+    return render_template('template2.html', prediction=print_pred)
 
 if __name__ == '__main__':
     port = int(environ.get('PORT', 5000))
