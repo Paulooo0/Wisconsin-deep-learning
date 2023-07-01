@@ -1,9 +1,9 @@
-import pandas as pd
+from pandas import read_csv
 
 def get_data(path):
-    return pd.read_csv(path)
+    return read_csv(path)
 
-def main():
+def rebuild():
     path = 'dataset/cancer_wisconsin.csv'
     transformed_df = get_data(path)
 
@@ -11,12 +11,11 @@ def main():
     transformed_df = transformed_df.drop(to_drop, axis=1)
     transformed_df = transformed_df.drop(['id'], axis=1)
 
-    for i in  range(len(transformed_df)):
+    for i in range(len(transformed_df)):
         if transformed_df.loc[i, 'diagnosis'] == "B":
             transformed_df.loc[i, 'diagnosis'] = 0
         if transformed_df.loc[i, 'diagnosis'] == "M":
             transformed_df.loc[i, 'diagnosis'] = 1
-
     print(transformed_df.head(5))
 
     file = open('dataset/rebuilted_cancer_wisconsin.csv', 'w')   
@@ -25,4 +24,4 @@ def main():
 
     
 if __name__ in '__main__':
-    main()
+    rebuild()

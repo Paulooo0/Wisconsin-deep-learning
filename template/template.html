@@ -4,13 +4,12 @@
         <title>classifier_prediction.html</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='static.css') }}">
     </head>
-        <h1 id="diag_pred"><span style="color: #5972ff">Diagnosis</span> Prediction</h1>
+    <h1 id="diag_pred"><span style="color: #5972ff">Diagnosis</span> Prediction</h1>
     <body>
-        <div class="container">
-            <p><label>I setted this parameters for demonstration.
-            <p>Try to use other values presents in the dataset, or generate your own parameters.</label></p>
-            <form method="post" action="/pred">
-                </label></p>
+        <div id="main_cont" class="container">
+            <section id="section" class="main-content with-left-sidebar" role="main">
+                <div id="scroll_container" class="container">
+                    <form method="post" action="/pred">
                 <p><label for="radius_mean">Radius mean </label>
                     <input type="float" id="radius_mean" name="radius_mean" min="0" value="17.99"></p>
                 <p><label for="texture_mean">Texture mean </label>
@@ -71,8 +70,21 @@
                     <input type="float" id="symmetry_worst" name="symmetry_worst" min="0" value="0.4601"></p>
                 <p><label for="fractal_dimension_worst">Fractal dimension worst </label>
                     <input type="float" id="fractal_dimension_worst" name="fractal_dimension_worst" min="0" value="0.1189"></p>
+
                 <button type="submit">Submit</button>
-            </form>
-        </div>
+                    </form>
+                </div>
+            </section>
+                <aside class="left-sidebar">
+                    <div class="psf-sidebar-widget sidebar-widget" role="secondary">
+                        <label><p>The model has <span style="color: #5972ff">30</span> neurons in the first layer,
+                        <span style="color: #5972ff">10</span> in second layer and <span style="color: #5972ff">1</span> in last layer.
+                            Approximately a accuracy of <span style="color: #5972ff">92%</span>,
+                            This model choices between <span style="color: green">benign</span> or <span style="color: red">malignant</span>,
+                            based on established condictions found in <span style="color: #5972ff">app.py.</span></p>
+                        </label>
+                    </div>
+                </aside>
+            </div>
     </body>
 </html>
