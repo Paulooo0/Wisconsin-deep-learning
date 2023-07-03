@@ -7,12 +7,9 @@ from flask import Flask, render_template, request
 from tensorflow import reshape
 from tensorflow import keras
 from os import environ
-from rebuild_dataset import get_data
 from webbrowser import open
 
 app = Flask(__name__, template_folder='template', static_folder='template/static')
-
-data = get_data('dataset/rebuilted_cancer_wisconsin.csv')
 
 @app.route('/')
 def display_gui():
