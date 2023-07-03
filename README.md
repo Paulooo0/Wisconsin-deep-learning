@@ -29,4 +29,4 @@ Has a script to do the result change the color, `Benign = green` and `Malignant 
 To create the model and deploy was used these technologies. Desconsidering the page that was used HTML, CSS and Javascript.
 
 ## How to run?
-In your terminal or console, run `git clone https://github.com/Paulooo0/Wisconsin-deep-learning`, open the folder and install the requirements running `pip install -r requirements.txt`, then run `python app.py`. The flask application will start, and you will be able to open the application in your browser with `http://localhost:5000` (the port link will be printed). Now you can use the application, type your parameters and press `submit`.
+In your terminal or console, run `git clone https://github.com/Paulooo0/Wisconsin-deep-learning`, then run `app.py`. All dependencies will be installed automatically, and `localhost:5000` will be opened in your main browser. So you finally can use the application.
