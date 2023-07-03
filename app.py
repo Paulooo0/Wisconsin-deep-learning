@@ -1,8 +1,14 @@
+from check_requirements import check_and_install
+file = open('requirements.txt', 'r')
+reader = file.readlines()
+check_and_install(reader)
+
 from flask import Flask, render_template, request
 from tensorflow import reshape
 from tensorflow import keras
 from os import environ
 from rebuild_dataset import get_data
+from webbrowser import open
 
 app = Flask(__name__, template_folder='template', static_folder='template/static')
 
@@ -58,5 +64,6 @@ def get_pred():
     return render_template('template2.html', prediction=print_pred)
 
 if __name__ == '__main__':
+    open('http://localhost:5000')
     port = int(environ.get('PORT', 5000))
-    app.run(host='localhost', port=port, debug=True)
+    app.run(host='localhost', port=port, debug=True, use_reloader=False)
