@@ -1,0 +1,7 @@
+pandas
+tensorflow
+flask
+plotly
+numpy
+matplotlib
+kdksodkaodkas

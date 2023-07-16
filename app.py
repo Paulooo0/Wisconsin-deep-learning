@@ -1,11 +1,10 @@
-from check_requirements import check_and_install
-file = open('requirements.txt', 'r')
+from utils.check_requirements import check_and_install
+file = open('utils/requirements.txt', 'r')
 reader = file.readlines()
 check_and_install(reader)
 
 from flask import Flask, render_template, request
-from tensorflow import reshape
-from tensorflow import keras
+from tensorflow import reshape, keras
 from os import environ
 from webbrowser import open
 
