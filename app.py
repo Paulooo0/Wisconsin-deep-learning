@@ -60,5 +60,4 @@ def get_pred():
     return render_template('template2.html', prediction=print_pred)
 
 if __name__ == '__main__':
-    port = int(environ.get('PORT', 5000))
-    app.run(host='localhost', port=port, debug=True, use_reloader=False)
+    app.run()
